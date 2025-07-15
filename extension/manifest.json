@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Bilingual Subtitles",
+  "version": "1.0",
+  "description": "Overlay dual subtitles and live translations on YouTube videos.",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
